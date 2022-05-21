@@ -1,9 +1,9 @@
 import * as S from './style';
 
-function ClipPost() {
+function ClipPost(props) {
   return (
         <S.PostContainer>
-            <S.ThumbnailBox />
+            <S.ThumbnailBox onClick={props.OnClick}/>
             <S.InfoBox>
                 <S.InfoText>사고 정보 1</S.InfoText>
                 <S.InfoText>사고 정보 2</S.InfoText>

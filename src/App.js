@@ -3,6 +3,8 @@ import './App.css';
 
 import styled from 'styled-components';
 import MainPage from './components/main/page';
+import MainRoutes from './components/routes';
+import Header from './components/layout/Header';
 
 const Container = styled.div`
  width: 100vw;
@@ -11,8 +13,13 @@ const Container = styled.div`
 
 function App() {
   return (
+    // <Container>
+    //   <MainPage />
+    // </Container>
     <Container>
-      <MainPage />
+      <Header />
+      {/* <MainPage /> */}
+      <MainRoutes />
     </Container>
   );
 }

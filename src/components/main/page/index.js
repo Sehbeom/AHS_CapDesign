@@ -1,17 +1,18 @@
 import * as S from './style';
 
-import Header from '../organisms/Header';
 import ClipPost from '../organisms/ClipPost';
 
-function MainPage() {
+import { useNavigate } from "react-router-dom";
+
+
+function MainPage(props) {
+
+  let navigate = useNavigate();
+
   return (
     <S.Container>
-      <S.MainHeader>
-        <Header />
-      </S.MainHeader>
-
       <S.MainBody>
-        <ClipPost />
+        <ClipPost OnClick={()=>navigate("/detail")}/>
         <ClipPost />
         <ClipPost />
         <ClipPost />

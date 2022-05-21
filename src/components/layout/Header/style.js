@@ -9,6 +9,7 @@ display: flex;
 padding-left: 4vw;
 background: rgba(56, 56, 56, 0.7);
 box-sizing: border-box;
+position: fixed;
 `
 
 export const Title = styled.text`

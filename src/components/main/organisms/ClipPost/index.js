@@ -1,9 +1,15 @@
 import * as S from './style';
 
+import ReactWebMediaPlayer from 'react-web-media-player';
+
 function ClipPost(props) {
   return (
         <S.PostContainer>
-            <S.ThumbnailBox onClick={props.OnClick}/>
+            <ReactWebMediaPlayer 
+            video={props.videoUrl}
+            width={400}
+            height={250}/>
+
             <S.InfoBox>
                 <S.InfoText>사고 정보 1</S.InfoText>
                 <S.InfoText>사고 정보 2</S.InfoText>

@@ -9,6 +9,7 @@ import DetailPage from "../detail/page";
 
 
 
+
 function MainRoutes() {
   return (
       <BrowserRouter>

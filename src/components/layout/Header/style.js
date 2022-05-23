@@ -10,6 +10,7 @@ padding-left: 4vw;
 background: rgba(56, 56, 56, 0.7);
 box-sizing: border-box;
 position: fixed;
+z-index: 99;
 `
 
 export const Title = styled.text`

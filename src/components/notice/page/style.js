@@ -6,7 +6,6 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
-  background: rgba(238, 241, 249, 0.7);
 `;
 
 export const MainBody = styled.div`
@@ -21,15 +20,10 @@ export const SideSection = styled.div`
 `;
 
 export const MainSection = styled.div`
+  height: 90vh;
   width: 85%;
   background: rgba(238, 241, 249, 0.7);
   display: flex;
   justify-content: center;
-`;
-
-export const ClipListBox = styled.div`
-  width: 81vw;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
+  align-items: center;
 `;

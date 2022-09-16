@@ -1,10 +1,10 @@
-import * as S from './style';
+import * as S from "./style";
 
-function Header() {
+function Header(props) {
   return (
-        <S.HeaderContainer>
-            <S.Title>Accident Handling System</S.Title>
-        </S.HeaderContainer>
+    <S.HeaderContainer>
+      <S.Title onClick={props.OnClick}>Accident Handling System</S.Title>
+    </S.HeaderContainer>
   );
 }
 

@@ -1,20 +1,21 @@
 import * as S from "./style";
 
 import Header from "../../layout/Header";
-import SideNav from "../../layout/SideNav";
 import ClipPost from "../../main/organisms/ClipPost";
+import SideNav from "../../layout/SideNav";
 
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+
 import { S3Info, AWSURL } from "../../../util/privateInfo";
 
 const AWS = require("aws-sdk");
 AWS.config.update(S3Info);
 let s3 = new AWS.S3();
 
-function DetailPage(props) {
+function NoticePage(props) {
   let navigate = useNavigate();
-  const location = useLocation();
+  const { videoUrl } = useParams();
 
   function delEvent(key) {
     s3.deleteObject(
@@ -41,10 +42,10 @@ function DetailPage(props) {
 
           <S.MainSection>
             <ClipPost
-              videoUrl={AWSURL + location.state.vidUrl}
-              videoName={location.state.vidUrl}
+              videoUrl={AWSURL + videoUrl}
+              videoName={videoUrl}
               OnClick={() => console.log("Clicked in Detail Page")}
-              OnDelete={() => delEvent(location.state.vidUrl)}
+              OnDelete={() => delEvent(videoUrl)}
             />
           </S.MainSection>
         </S.MainBody>
@@ -53,4 +54,4 @@ function DetailPage(props) {
   );
 }
 
-export default DetailPage;
+export default NoticePage;
